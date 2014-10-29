@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<servlet>
+		<servlet-name>Details</servlet-name>
+		<jsp-file>StudentDetailsEntry.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Details</servlet-name>
+		<url-pattern>Entry</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EntryServlet</servlet-name>
+		<servlet-class>com.student.StudentDetailsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EntryServlet</servlet-name>
+		<url-pattern>/entryJSP</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>View</servlet-name>
+		<jsp-file>View.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>View</servlet-name>
+		<url-pattern>ViewDetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewServlet</servlet-name>
+		<servlet-class>com.student.StudentViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/viewJSP</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>Delete</servlet-name>
+		<jsp-file>Delete.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>DeleteDetails</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>com.student.StudentDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/deleteJSP</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>Update</servlet-name>
+		<jsp-file>Update.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>UpdateDetails</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateJSPServlet</servlet-name>
+		<jsp-file>RecordView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateJSPServlet</servlet-name>
+		<url-pattern>/updateJSP</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>com.student.StudentUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/updateViewJSP</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>HomePage.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
