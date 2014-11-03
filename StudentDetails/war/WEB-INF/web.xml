@@ -46,6 +46,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/viewJSP</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+		<servlet-name>Name</servlet-name>
+		<servlet-class>com.student.NameView</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Name</servlet-name>
+		<url-pattern>/nameView</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 	

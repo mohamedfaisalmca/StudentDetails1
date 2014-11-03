@@ -15,12 +15,13 @@ import com.google.appengine.api.datastore.KeyFactory;
 @SuppressWarnings("serial")
 public class StudentViewServlet extends HttpServlet 
 {
-	public void doPost(HttpServletRequest req,HttpServletResponse resp)throws IOException 
+	public void doGet(HttpServletRequest req,HttpServletResponse resp)throws IOException 
 	{
+		resp.setContentType("text/html");
 		PersistenceManager pm=PMF.get().getPersistenceManager();
 		
 		PrintWriter out=resp.getWriter();
-		
+		System.out.println("coming to servlet");
 		int rollNo=Integer.parseInt(req.getParameter("rollNo"));
 		try
 		{
@@ -28,11 +29,11 @@ public class StudentViewServlet extends HttpServlet
 	        
 			StudentList es = pm.getObjectById(StudentList.class, k);
         
-	        out.println("Name= "+es.getName());
-	        out.println("Roll No= "+es.getRollno());
-	        out.println("Department Name= "+es.getStudentListChild().getDepartment());
-	        out.println("College Name= "+es.getStudentListChild().getCollege());        
-	        out.println("Location Name= "+es.getStudentListChild().getLocation());	        
+	        out.println("Name= "+es.getName()+"<br>");
+	        out.println("Roll No= "+es.getRollno()+"<br>");
+	        out.println("Department Name= "+es.getStudentListChild().getDepartment()+"<br>");
+	        out.println("College Name= "+es.getStudentListChild().getCollege()+"<br>");        
+	        out.println("Location Name= "+es.getStudentListChild().getLocation()+"<br>");	        
 		}
 		catch(Exception e)
 		{
